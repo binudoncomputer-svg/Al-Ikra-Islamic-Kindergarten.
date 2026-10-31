@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#075b32"><title>Al-Ikra Smart School</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,'Noto Sans Bengali',sans-serif;background:#f3f7f4;color:#183326}
+header{background:linear-gradient(140deg,#075b32,#0b8048);color:#fff;text-align:center;padding:25px 14px;border-bottom:5px solid #f4c900}
+.logo{width:100px;height:100px;object-fit:contain;margin:auto auto 10px;background:white;border:3px solid #f4c900;border-radius:50%;display:block}
+h1{font-size:21px;margin:8px 0}p{line-height:1.6}.address{font-size:13px;margin:5px 0}
+main{padding:16px;max-width:700px;margin:auto}.lang{display:flex;justify-content:center;gap:8px;margin-bottom:14px}
+button{font:inherit;cursor:pointer;border:0;border-radius:12px;padding:13px}
+.lang button{background:#e1eee5;color:#075b32}.lang button.active,.primary{background:#075b32;color:white}
+.welcome,.card,.role{background:#fff;border-radius:16px;padding:17px;box-shadow:0 4px 15px #173b2210;margin-bottom:13px}
+h2,h3{color:#075b32;margin:0 0 10px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.role{text-align:center;margin:0}.role span{font-size:28px;display:block;margin-bottom:8px}.role strong{color:#075b32;display:block}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:8px}.feature{padding:10px;background:#eff7f1;border-radius:9px;font-size:14px}
+.hidden{display:none}label{font-weight:bold;font-size:14px}input{width:100%;padding:12px;border:1px solid #cbd8cf;border-radius:10px;margin:6px 0 12px;font:inherit}.primary{width:100%}.muted{font-size:12px;color:#657369}footer{text-align:center;font-size:12px;color:#657369;padding:15px}
+</style></head><body>
+<header><img class="logo" src="school-logo.jpg" alt="Al-Ikra Islamic Kindergarten Logo"><h1 id="schoolBn">আল-ইকরা ইসলামী কিন্ডারগার্টেন</h1><h1 id="schoolEn" class="hidden">Al-Ikra Islamic Kindergarten</h1><p class="address" id="addressBn">নয়াবাজার (শ্রীরামপুর), পতনউষার, কমলগঞ্জ, মৌলভীবাজার</p><p class="address hidden" id="addressEn">Noyabazar (Srirampur), Patan Ushar, Kamalganj, Moulvibazar, Bangladesh</p></header>
+<main><div class="lang"><button id="bnBtn" class="active" onclick="setLang('bn')">বাংলা</button><button id="enBtn" onclick="setLang('en')">English</button></div>
+<section id="home"><div class="welcome"><h2 data-bn="স্মার্ট স্কুল ম্যানেজমেন্ট" data-en="Smart School Management">স্মার্ট স্কুল ম্যানেজমেন্ট</h2><p data-bn="শিক্ষার্থী, শিক্ষক ও স্কুল পরিচালনার ডিজিটাল প্ল্যাটফর্ম।" data-en="A digital platform for students, teachers and school administration.">শিক্ষার্থী, শিক্ষক ও স্কুল পরিচালনার ডিজিটাল প্ল্যাটফর্ম।</p></div>
+<div class="grid">
+<button class="role" onclick="login('student')"><span>🎓</span><strong data-bn="শিক্ষার্থী" data-en="Student">শিক্ষার্থী</strong><small data-bn="রুটিন, ফলাফল ও নোটিশ" data-en="Routine, results and notices">রুটিন, ফলাফল ও নোটিশ</small></button>
+<button class="role" onclick="login('teacher')"><span>👩‍🏫</span><strong data-bn="শিক্ষক" data-en="Teacher">শিক্ষক</strong><small data-bn="উপস্থিতি ও নম্বর" data-en="Attendance and marks">উপস্থিতি ও নম্বর</small></button>
+<button class="role" onclick="login('admin')"><span>🔐</span><strong data-bn="অ্যাডমিন" data-en="Admin">অ্যাডমিন</strong><small data-bn="স্কুল পরিচালনা" data-en="Manage school">স্কুল পরিচালনা</small></button>
+<button class="role" onclick="login('parent')"><span>👪</span><strong data-bn="অভিভাবক" data-en="Parent">অভিভাবক</strong><small data-bn="সন্তানের অগ্রগতি" data-en="Child progress">সন্তানের অগ্রগতি</small></button>
+</div>
+<div class="card" style="margin-top:13px"><h3 data-bn="স্কুলের সুবিধা" data-en="School Features">স্কুলের সুবিধা</h3><div class="features">
+<div class="feature" data-bn="📅 ক্লাস রুটিন" data-en="📅 Class routine">📅 ক্লাস রুটিন</div><div class="feature" data-bn="✅ উপস্থিতি" data-en="✅ Attendance">✅ উপস্থিতি</div><div class="feature" data-bn="📊 পরীক্ষার ফলাফল" data-en="📊 Exam results">📊 পরীক্ষার ফলাফল</div><div class="feature" data-bn="📢 নোটিশ বোর্ড" data-en="📢 Notice board">📢 নোটিশ বোর্ড</div><div class="feature" data-bn="💳 ফি ব্যবস্থাপনা" data-en="💳 Fee management">💳 ফি ব্যবস্থাপনা</div><div class="feature" data-bn="👪 অভিভাবক সুবিধা" data-en="👪 Parent access">👪 অভিভাবক সুবিধা</div></div></div>
+<div class="card"><h3 data-bn="যোগাযোগ" data-en="Contact">যোগাযোগ</h3><p>01309-274018<br>01875-973712<br>01705-361486</p></div></section>
+<section id="login" class="card hidden"><button onclick="goHome()">← <span data-bn="ফিরে যাও" data-en="Back">ফিরে যাও</span></button><h3 id="loginTitle">লগইন</h3><label data-bn="আইডি / মোবাইল নম্বর" data-en="ID / Mobile number">আইডি / মোবাইল নম্বর</label><input placeholder="ID / মোবাইল নম্বর"><label data-bn="পাসওয়ার্ড" data-en="Password">পাসওয়ার্ড</label><input type="password" placeholder="Password"><button class="primary" onclick="demo()">প্রবেশ করো / Sign in</button><p class="muted" data-bn="এটি প্রাথমিক ডেমো। বাস্তব লগইন ও তথ্য সংরক্ষণ চালু করতে নিরাপদ সার্ভার ও ডেটাবেস যুক্ত করতে হবে। এখানে বাস্তব পাসওয়ার্ড দেবেন না।" data-en="This is an initial demo. Secure server and database setup is required for real login and data storage. Do not enter real passwords here.">এটি প্রাথমিক ডেমো। বাস্তব লগইন ও তথ্য সংরক্ষণ চালু করতে নিরাপদ সার্ভার ও ডেটাবেস যুক্ত করতে হবে। এখানে বাস্তব পাসওয়ার্ড দেবেন না।</p></section>
+</main><footer>© Al-Ikra Islamic Kindergarten<br>
+<span data-bn="ডেভেলপার: Shamim Ahmad Choudhury" data-en="Developer: Shamim Ahmad Choudhury">ডেভেলপার: Shamim Ahmad Choudhury</span><br>
+<span data-bn="সফটওয়্যার ও হার্ডওয়্যার ইঞ্জিনিয়ার" data-en="Software and Hardware Engineer">সফটওয়্যার ও হার্ডওয়্যার ইঞ্জিনিয়ার</span><br>
+<span data-bn="মোবাইল: +8801773682886" data-en="Mobile: +8801773682886">মোবাইল: +8801773682886</span>
+</footer>
+<script>
+let lang='bn',role='student';
+function setLang(l){lang=l;document.documentElement.lang=l;document.getElementById('bnBtn').classList.toggle('active',l==='bn');document.getElementById('enBtn').classList.toggle('active',l==='en');document.getElementById('schoolBn').classList.toggle('hidden',l!=='bn');document.getElementById('schoolEn').classList.toggle('hidden',l!=='en');document.getElementById('addressBn').classList.toggle('hidden',l!=='bn');document.getElementById('addressEn').classList.toggle('hidden',l!=='en');document.querySelectorAll('[data-bn]').forEach(e=>e.textContent=e.dataset[l]);document.querySelectorAll('input').forEach(e=>e.placeholder=l==='bn'?'এখানে লিখুন':'Enter here');}
+function login(r){role=r;document.getElementById('home').classList.add('hidden');document.getElementById('login').classList.remove('hidden');let names={bn:{student:'শিক্ষার্থী লগইন',teacher:'শিক্ষক লগইন',admin:'অ্যাডমিন লগইন',parent:'অভিভাবক লগইন'},en:{student:'Student Login',teacher:'Teacher Login',admin:'Admin Login',parent:'Parent Login'}};document.getElementById('loginTitle').textContent=names[lang][r];}
+function goHome(){document.getElementById('login').classList.add('hidden');document.getElementById('home').classList.remove('hidden')}
+function demo(){alert(lang==='bn'?'এটি ডেমো। বাস্তব লগইন এখনো চালু হয়নি।':'Demo only. Real login is not enabled yet.')}
+</script></body></html>
